@@ -39,7 +39,7 @@ function FeaturedProduct({products, featuredProducts, filterColor, filterMateria
     
 
         </div>      
-        <ProductViewSection products={filterFeature} color={filterColor} material= {filterMaterial}/>
+        <ProductViewSection products={filterFeature}/>
     </div>
   )
 }

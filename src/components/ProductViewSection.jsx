@@ -2,18 +2,9 @@ import React from 'react'
 import FilterView from './FilterView'
 import SingleProduct from './SingleProduct'
 
-function ProductViewSection({products, color, material}) {
+function ProductViewSection({products}) {
   // console.log(products)
   // console.log(color)
-
-  const getProductByColor = (id) =>{
-    return products.filter((x) => x.colorId === id)
-    
-  }
-  const getProductByMaterial = (id) => {
-    return products.filter((x) => x.materialId === id)
-  }
-
 
   return (
 
