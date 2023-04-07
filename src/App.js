@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import HeroSection from './components/HeroSection';
 import FeaturedProduct from './pages/FeaturedProduct';
 import AllProduct from './pages/AllProduct';
+import { CartItemsContext } from './components/Header';
 
 function App() {
 
@@ -71,10 +72,10 @@ function App() {
       fetchColors();
       fetchMaterials();
      }, [])
-
+     const[cartItemCount, setCartItemCount] = useState(0)
   return (
     <div className="App">
-
+      <CartItemsContext.Provider value={{cartItemCount, setCartItemCount}}>
         <Router>
         <HeroSection/>
         <Routes>
@@ -83,7 +84,7 @@ function App() {
         </Routes>
         <Footer/>
       </Router>
-      
+      </CartItemsContext.Provider>
     </div>
   );
 }

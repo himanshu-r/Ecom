@@ -26,7 +26,7 @@ function AllProduct( {products, filterColor, filterMaterial}) {
         {filterMaterial.map((item)=> {
         return(
             <div key={item.id} className='mb-[8px]'>
-            <a onClick={() => {getProductByMaterial(item.id)}}>{item.name}</a>
+            <a className='cursor-pointer' onClick={() => {getProductByMaterial(item.id)}}>{item.name}</a>
             </div>
         )
         })}
@@ -35,7 +35,7 @@ function AllProduct( {products, filterColor, filterMaterial}) {
         {filterColor.map((item)=>{
         return(
             <div key={item.id} className='mb-[8px]'>
-            <a onClick={()=> {getProductByColor(item.id)}}>{item.name}</a>
+            <a className='cursor-pointer' onClick={()=> {getProductByColor(item.id)}}>{item.name}</a>
             </div>
         )
         })}
